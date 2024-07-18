@@ -11,7 +11,7 @@ export function Product({ product }: { product: ProductItem }) {
   const addToCart = CartStore((state) => state.addToCart);
   return (
     <div>
-      <div className='border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition'>
+      <div className='border border-[#e4e4e4] shadow h-[300px] mb-4 relative overflow-hidden group transition'>
         <div className='w-full h-full flex justify-center items-center'>
           <div className='w-[200px] mx-auto flex justify-center items-center'>
             <Image
