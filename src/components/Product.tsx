@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { BsEyeFill, BsPlus } from 'react-icons/bs';
 
 export function Product({ product }: { product: ProductItem }) {
-  const { id, title, category, image, price } = product;
+  const { id, title, image, category, price } = product;
   const addToCart = CartStore((state) => state.addToCart);
   return (
     <div>
@@ -15,16 +15,19 @@ export function Product({ product }: { product: ProductItem }) {
         <div className='w-full h-full flex justify-center items-center'>
           <div className='w-[200px] mx-auto flex justify-center items-center'>
             <Image
-              width={120}
+              width={0}
               height={160}
-              className='h-auto w-auto group-hover:scale-110 transition duration-300'
+              className='max-h-[160px] w-auto group-hover:scale-110 transition duration-300'
               src={image}
               alt='Product image'
             />
           </div>
         </div>
         <div className='absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300'>
-          <button onClick={() => addToCart(product)}>
+          <button
+            type='button'
+            aria-label='Add to cart'
+            onClick={() => addToCart(product)}>
             <div className='flex justify-center items-center text-white w-12 h-12 bg-red-500'>
               <BsPlus className='text-3xl' />
             </div>
@@ -32,7 +35,7 @@ export function Product({ product }: { product: ProductItem }) {
           <Link
             href={`/products/${id}`}
             className='w-12 h-12 bg-white text-primary drop-shadow-xl flex justify-center items-center'>
-            <BsEyeFill />
+            <BsEyeFill aria-label='View' />
           </Link>
         </div>
       </div>

@@ -24,15 +24,14 @@ export function Header() {
       <div className='container mx-auto flex items-center justify-between h-full'>
         {/* logo */}
         <Link href={'/'}>
-          <div>
-            <Image
-              width={0}
-              height={0}
-              className='w-[40px] h-auto'
-              src='/img/logo.svg'
-              alt=''
-            />
-          </div>
+          <Image
+            width={0}
+            height={0}
+            className='w-[40px] h-auto'
+            src='/img/logo.svg'
+            title='Logo'
+            alt='Logo'
+          />
         </Link>
         {/* cart */}
         <div

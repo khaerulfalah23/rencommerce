@@ -20,8 +20,8 @@ export function CartItem({ item }: { item: ProductItem }) {
         <Link href={`/products/${id}`}>
           <Image
             width={80}
-            height={80}
-            className='w-auto h-auto'
+            height={0}
+            className='max-w-[80px] h-auto'
             src={image}
             alt='Product image'
           />

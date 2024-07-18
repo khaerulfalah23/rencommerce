@@ -10,7 +10,7 @@ export function ProductDetail({ id }: { id: string }) {
   if (!product) {
     return (
       <section className='h-screen flex justify-center items-center'>
-        Lodading...
+        Loading...
       </section>
     );
   }
